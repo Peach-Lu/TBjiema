@@ -1,18 +1,48 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <el-container class="home_container">
+      <el-header style="line-height: 60px;background: #545c64; color: #fff;">
+        <h1>接码平台取号</h1>
+      </el-header>
+      <el-container>
+        <el-aside width="200px" class="left_menu">
+          <NavMenu></NavMenu>
+        </el-aside>
+        <el-main>
+          <router-view />
+        </el-main>
+      </el-container>
+    </el-container>
   </div>
 </template>
-
 <script>
-// @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
-
+import NavMenu from '../components/NavMenu.vue'
 export default {
   name: "Home",
   components: {
-    HelloWorld,
+    NavMenu
+    // HelloWorld,
   },
-};
+  data () {
+    return {
+      str: '111'
+    }
+  },
+  created () {
+
+  }
+}
 </script>
+<style lang="less">
+.home {
+  height: 100%;
+
+  .home_container {
+    height: 100%;
+
+    .left_menu {
+      background: #545c64;
+    }
+  }
+}
+</style>

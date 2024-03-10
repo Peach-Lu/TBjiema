@@ -1,5 +1,5 @@
 <template>
   <div class="about">
-    <h1>This is an about page</h1>
+    <h1>待对接其他接码平台</h1>
   </div>
 </template>

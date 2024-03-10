@@ -9,6 +9,21 @@ const routes = [
     path: "/",
     name: "Home",
     component: Home,
+    redirect: '/',
+    children: [
+      {
+        path: "/",
+        name: "Huo",
+        component: () =>
+          import(/* webpackChunkName: "huohuli" */ "../views/huohuli/index.vue"),
+      },
+      {
+        path: "/about",
+        name: "about",
+        component: () =>
+          import(/* webpackChunkName: "huohuli" */ "../views/About.vue"),
+      },
+    ]
   },
   {
     path: "/about",
